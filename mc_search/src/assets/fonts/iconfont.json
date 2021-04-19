@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "74599656",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "903796",
+      "name": "火",
+      "font_class": "huo",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "1079703",
+      "name": "时钟",
+      "font_class": "shizhong",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "13314447",
+      "name": "老师",
+      "font_class": "laoshi",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    }
+  ]
+}

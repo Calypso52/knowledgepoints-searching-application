@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let data = [ {
+        name: 'Andy',
+        age: 13,
+        height: 100
+    }, {
+        name: 'Jack',
+        age: 14,
+        height: 101
+    }, {
+        name: 'Lucy',
+        age: 12,
+        height: 102
+    } ]
+
+    //在实际项目中，我们需要根据筛选框中的条件来实现数据的过滤,下面为过滤方法：
+//@param condition 过滤条件
+//@param data 需要过滤的数据
+let filter=(condition,data)=>{
+    return data.filter( item => {
+        return Object.keys( condition ).every( key => {
+           return String( item[ key ] ).toLowerCase().includes( 
+                   String( condition[ key ] ).trim().toLowerCase() )
+            } )
+     } )
+}
+
+
+
+
+//假设选择的条件为name中带字母a的元素
+var condition={name:'', age: '', height: ''}
+console.log(filter(condition,data)) //[ {name: 'Andy',age: 13},{name: 'Jack',age: 14}]
+ 
+//假设选择的条件为name中带字母a，而且age为13的元素
+var condition={name:'a', age:13, height: ''}
+console.log(filter(condition,data)) //[ {name: 'Andy',age: 13}]
+
+var condition={name:'a', age:13, height: 101}
+console.log(filter(condition,data))
+</script>
+<body>
+    
+</body>
+</html>

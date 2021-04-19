@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分页</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .pagination {
+            margin: 20px 0;
+        }
+        .pagination a {
+            padding: 5px 15px;
+            border: 1px solid yellowgreen;
+            text-decoration: none;
+            margin: 5px;
+        }
+        /* 点按钮变色 这里只是提前写好样式 如果为true在会变色 */
+        .pagination a.active {
+           background : #3ba9ff;
+           color: white;
+        }
+    </style> 
+
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="user in newUser":key="user.id">
+                {{user.name}}
+            </li>        
+        </ul>
+            
+        <!--         这里绑定总页数                  父组件传过来参数 复用件接收后判断如果为true执行css样式  --> 
+        <p-pagination :pages=showUsers @click-pag="fn" :page = 'uPage'> </p-pagination> 
+                         
+    </div>
+    <script>
+        Vue.component("p-pagination",{
+            template: `
+                        <div class="pagination">    
+                            <a href="javascript:;" @click='deduction'>上一页</a>  
+
+                            <a href="javascript:;" v-for="pag in pages" @click="goto(pag)"                         
+                            :class="{active: pag === page}"
+                            >{{pag}}</a>
+
+                            <a href="javascript:;" @click='score'>下一页</a>   
+                        </div>                                           
+                      `,
+            props:['pages','page'],//接收参数 
+            methods: {
+                goto(pag){            //点击按钮给父组件传参  这里的参数也可以直接使用pag
+                    this.$emit("click-pag",pag);
+                    // console.log(this.pages);
+                    console.log(this.page)        
+                },
+                // 上一页
+                deduction(){
+                    if(this.page - 1 >0){             
+                        this.$emit("click-pag",this.page-1);
+                     }else{
+                        this.page = 1
+                     }                      
+                },  
+                // 下一页
+                score(){  //若果是最后一页 
+                    if(this.page >= this.pages ){    
+                        this.page = this.pages            
+                    }else{
+                        this.$emit("click-pag",this.page+1);  
+                    }   
+                },
+            }
+        });
+        let app = new Vue({
+            el:"#app",
+            data:{
+                users:[
+                    {id:1,name:'小王'},
+                    {id:2,name:'小红'},
+                    {id:3,name:'小明'},
+                    {id:4,name:'小丽'},
+                    {id:5,name:'小东'},
+                    {id:6,name:'小花'},
+                    {id:7,name:'小李'},  
+                                   
+                ],
+                uPage:1, //当前页
+                perPage:2, //每页显示多少条
+                
+            },
+            computed: {
+                // 获取总页数 
+                showUsers:{  
+                    get(){  // 获取的数据是总页数，由总条数除每页显示多少条决定
+                        return Math.ceil(this.users.length / this.perPage);   // Math.ceil() 返回一个大于等于给定数字的最小整数
+                    }
+                },
+                newUser:{ //渲染到页面
+                    get(){ // 分割数据
+                        return JSON.parse(JSON.stringify(this.users)).splice((this.uPage-1)*this.perPage , this.perPage)
+                    }
+                },
+            },
+
+            methods: {
+                fn(n){
+                    // console.log(n)
+                    this.uPage = n;  //接收到 子组件传过来的数据 修改data的显示
+                },
+         
+             },             
+        });
+    </script>
+</body>
+</html>

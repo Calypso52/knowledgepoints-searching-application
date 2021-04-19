@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./base.css">
+    <title>搜索课程_中国大学MOOC（慕课）</title>
+</head>
+<body>
+    <!-- 顶部导航条 -->
+    <div class="nav_container">
+        <div class="topBanner">
+            <!-- 左侧logo图标 -->
+            <div class="logoImg">
+                <a href="javascript:;"><img src="./img/moocLogo.png" alt="logo"></a>
+            </div>
+            <!-- 中间导航栏 -->
+            <ul class="nav">
+                <li><a href="javascript:;">课程</a></li>
+                <li><a href="javascript:;">学校</a></li>
+                <li><a href="javascript:;">学校云</a></li>
+                <li><a href="javascript:;">慕课堂</a></li>
+                <li><a href="javascript:;">下载APP</a></li>
+            </ul>
+            <!-- 右侧搜索框 -->
+            <div class="search">
+                <!-- 搜索框 -->
+                <input type="text" placeholder="搜索感兴趣的课程" maxlength="20">
+                <button>搜索</button>
+                
+
+                <!-- 登陆注册 -->
+                <div class="login">
+                    <a href="javascript:;">登录 &nbsp&nbsp| &nbsp&nbsp注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主体部分 -->
+    <div class="main_body">
+        <div class="sep20"></div>
+        <div class="container_wrapper">
+            <div class="top"><p>共1000条XXX相关的结果</p></div>
+            <div class="sep20b"></div>
+            <div class="lists">
+                <div class="mid-tag-bar">
+                    <ul>
+                        <li><a href="javascript:;">全部（1000）</a></li>
+                        <li><a href="javascript:;">正在进行</a></li>
+                        <li><a href="javascript:;">即将开始</a></li>
+                        <li><a href="javascript:;">已结束</a></li>
+                    </ul>
+                    <div class="tag-left">
+                        <input type="checkbox" class="tl-checkbox">
+                        <span>国家精品课</span>
+                    </div>
+                </div>
+                <div class="courseCardListBox">
+                    <div>
+                        <!-- 1 -->
+                        <div class="clist">
+                            <div class="imgWrapper"><img src="./img/1.jpg"></div>
+                            <div class="contents">
+                                <div class="contents-title">
+                                    <a href="javascript:;">数据库及应用</a>
+                                    <div class="uniq">
+                                        <span>国家精品</span>
+                                    </div>
+                                </div>
+                                <div class="first-row">
+                                    <a class="univ" href="javascript:;">中南财经政法大学</a>
+                                    <!-- 作者名字 -->
+                                    <a class="auth" href="#">杨蟠</a><span>、</span>
+                                    <a class="auth" href="#">朱平</a><span>、</span>
+                                    <a class="auth" href="#">王倩</a><span>、</span>
+                                    <a class="auth" href="#">张志</a><span>、</span>
+                                    <a class="auth" href="#">蔡燕</a><span>、</span>
+                                    <a class="auth" href="#">马霄</a><span>、</span>
+                                    <a class="auth" href="#">张承德</a>
+                                </div>
+                                <div class="brief-row" id="brief-row">
+                                    本课程以Microsoft Office 2010中的Access为例，介绍数据库系统的基本理论、设计开发和操作应用。主要内容包括关系数据库的基本理论、数据库系统的设计理论、
+                                </div>
+                                <!-- 加入vue后再改 -->
+                                <script>
+                                    var myBox = document.getElementById('brief-row')
+                                    var myBoxHtml = myBox.innerHTML.slice(0, 10) + '...'
+                                    myBox.innerHTML = myboxHtml
+                                </script>
+
+                                <div class="footer">
+                                    <div class="footer-l">
+                                        <i></i>
+                                        <span class="fl1">xxxx人参加</span>
+                                    </div>
+                                    <div class="footer-r">
+                                        <i></i>
+                                        <span class="fl2">进行至第x周</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer_wrapper"></div>
+</body>
+</html>

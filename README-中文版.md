@@ -124,7 +124,7 @@ public List<GetKnowledgePointInfoDataBase> findAll()
 
 ###  1.初始化页面
 
-![初始](C:\Users\calypso\Desktop\总结\图片\初始.png)
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Initial.png)
 
 > 页面上部是搜索栏。
 >
@@ -136,7 +136,7 @@ public List<GetKnowledgePointInfoDataBase> findAll()
 
 ###  2.搜索成功页面
 
-![搜索成功](C:\Users\calypso\Desktop\总结\图片\搜索成功.png)
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Search%20successful.png)
 
 搜索关键词：数据库 ，获得词条，知识点名字都带有“数据库”。
 
@@ -158,25 +158,25 @@ public List<GetKnowledgePointInfoDataBase> findAll()
 
 > 当输入的关键词没有任何匹配时触发
 
-![搜索失败](C:\Users\calypso\Desktop\总结\图片\搜索失败.png)
+![image](![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Search%20failed.png))
 
 ###  4.筛选
 
 课程状态：
 
-![课程状态筛选](C:\Users\calypso\Desktop\总结\图片\课程状态筛选.png)
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Course%20status%20screening.png)
 
 教师风格：
 
-![教师风格筛选](C:\Users\calypso\Desktop\总结\图片\教师风格筛选.png)
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Teacher%20style%20selection.png)
 
 国家精品：
 
-![国家精品筛选](C:\Users\calypso\Desktop\总结\图片\国家精品筛选.png)
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/National%20Boutique%20Screening.png)
 
 说明：点击勾选筛选条件后，筛选栏的名字会改为筛选的条件
 
-![image-20210418165049107](C:\Users\calypso\AppData\Roaming\Typora\typora-user-images\image-20210418165049107.png)
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Filter.png)
 
 ###  5.技术实现
 
@@ -184,7 +184,7 @@ public List<GetKnowledgePointInfoDataBase> findAll()
 
 ####  1）组件
 
-![image-20210418170410446](C:\Users\calypso\AppData\Roaming\Typora\typora-user-images\image-20210418170410446.png)
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/components.png)
 
 index：父组件
 

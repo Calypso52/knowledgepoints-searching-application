@@ -134,6 +134,7 @@ public List<GetKnowledgePointInfoDataBase> findAll()
 ## 1. Page design and function
 
 ### 1. Initialize the page
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Initial.png)
 
 > At the top of the page is the search bar.
 >

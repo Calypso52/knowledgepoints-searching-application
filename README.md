@@ -144,6 +144,7 @@ public List<GetKnowledgePointInfoDataBase> findAll()
 Description: After the user enters the key words of the knowledge points that they want to search in the search bar, the front-end page will be passed to the back-end through axios, and the back-end uses SQL statements to search in the mapped database, and uses the JSON array of records that meet the conditions The way is returned to the front end.
 
 ### 2. Search success page
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Search%20successful.png)
 
 Search keywords: database, get entries, and knowledge points have "database" in their names.
 
@@ -162,24 +163,30 @@ Search keywords: database, get entries, and knowledge points have "database" in 
 > Upper right corner: Course status, divided into about to start (yellow), finished (gray), and in progress (green)
 
 ### 3. Search failed page
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Search%20failed.png)
 
 > Triggered when there is no match for the entered keyword
 
 ### 4. filter
 
 Course status:
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Course%20status%20screening.png)
 
 Teacher style:
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Teacher%20style%20selection.png)
 
 National Boutique:
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/National%20Boutique%20Screening.png)
 
 Note: After you click to check the filter conditions, the name of the filter column will be changed to the filter conditions
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/Filter.png)
 
 ### 5. Technical realization
 
 > The front-end part uses the vue framework to build scaffolding, multi-component development, and uses vuex to comprehensively manage the data used by each component
 
 #### (a) Component
+![image](https://github.com/Calypso52/knowledgepoints_searching/blob/main/pictures/components.png)
 
 > Index: parent component
 >
